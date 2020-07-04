@@ -18,17 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="30dp"-->
-<!--            android:layout_marginLeft="30dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.274"-->
-<!--            tools:srcCompat="@tools:sample/avatars" />-->
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageView"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginLeft="30dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="0.274"-->
+        <!--            tools:srcCompat="@tools:sample/avatars" />-->
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -41,7 +41,8 @@
             app:civ_border_color="#B3FFFFFF"
             app:civ_border_width="2dp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="51dp" />
+            tools:layout_editor_absoluteY="51dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView3"

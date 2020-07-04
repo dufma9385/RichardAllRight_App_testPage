@@ -31,7 +31,7 @@
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_h4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.4" />
 
@@ -133,22 +133,32 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
+    <Button
+        android:id="@+id/menubtn"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:id="@+id/fl1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/borum"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <fragment
-            android:id="@+id/map_fragment"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <fragment-->
+<!--            android:id="@+id/map_fragment"-->
+<!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
     </FrameLayout>
 
     <FrameLayout
@@ -176,16 +186,36 @@
                 android:orientation="vertical"
                 android:weightSum="10">
 
-                <TextView
-                    android:id="@+id/slideTitle"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:background="@color/lightGreen"
-                    android:gravity="center"
-                    android:text="김민경 님"
-                    android:textColor="#8E8E8E"
-                    android:textSize="24dp" />
+                    android:background="@color/tomyeongGreen">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/borum"
+                        app:civ_border_color="#B3FFFFFF"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="김민경님"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profile_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <Button
                     android:id="@+id/MyPagebtn"
@@ -201,15 +231,8 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="#FFFFFF"
-                    android:text="Log Out" />
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF"
-                    android:text="Button" />
+                    android:text="Log Out"
+                    android:visibility="visible" />
 
             </LinearLayout>
         </LinearLayout>
